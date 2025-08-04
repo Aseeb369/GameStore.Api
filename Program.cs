@@ -43,5 +43,30 @@ app.MapPost("games", (CreateGameDto newGame) =>
     games.Add(game);
     return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);   
 });
+ {
+     var index = games.FindIndex(game => game.Id == id);
+
+     // Add this check to prevent crashing
+     if (index == -1)
+     {
+         return Results.NotFound();
+     }
+
+     games[index] = new Gamedto(
+        id,
+        updateGameDto.Name, // Use the correct parameter name
+        updateGameDto.Genre,
+        updateGameDto.Price,
+        updateGameDto.ReleaseDate
+    );
+     return Results.NoContent();
+ });
+
+ // DELETE /games/1
+     app.MapDelete ("games/{id}", (int id) =>
+ {
+     games.RemoveAll(game => game.Id == id);
+     return Results.NoContent();
+    });
 
 app.Run();

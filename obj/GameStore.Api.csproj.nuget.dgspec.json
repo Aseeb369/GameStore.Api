@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PROJECT\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj": {}
+    "C:\\PROJECT\\GameStore.Api\\GameStore.Api.csproj": {}
   },
   "projects": {
-    "C:\\PROJECT\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj": {
+    "C:\\PROJECT\\GameStore.Api\\GameStore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PROJECT\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj",
+        "projectUniqueName": "C:\\PROJECT\\GameStore.Api\\GameStore.Api.csproj",
         "projectName": "GameStore.Api",
-        "projectPath": "C:\\PROJECT\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj",
+        "projectPath": "C:\\PROJECT\\GameStore.Api\\GameStore.Api.csproj",
         "packagesPath": "C:\\Users\\91884\\.nuget\\packages\\",
-        "outputPath": "C:\\PROJECT\\GameStore.Api\\GameStore.Api\\obj\\",
+        "outputPath": "C:\\PROJECT\\GameStore.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "MinimalApis.Extensions": {
+              "target": "Package",
+              "version": "[0.11.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

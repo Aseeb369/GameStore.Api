@@ -7,7 +7,7 @@ POST http://localhost:5216/games
 Content-Type: application/json
 
 {
-    "Name" : "home mate",
+    "Name" : "",
     "Genre" : "Kids and Family",
     "Price" : 19.9,
     "ReleaseDate" : "2011-11-18"

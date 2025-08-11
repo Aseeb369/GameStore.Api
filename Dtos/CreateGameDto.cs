@@ -3,8 +3,16 @@ using System.ComponentModel.DataAnnotations;
 namespace GameStore.Api.Dtos;
 
 public record class CreateGameDto(
-  [Required][StringLength(50)] string Name,
-  [Required][StringLength(20)] string Genre,
-  [Range(1, 100)] decimal Price,
-  DateOnly ReleaseDate);
+  [property: Required]
+  [property: StringLength(50)]
+  string Name,
 
+  [property: Required]
+  [property: StringLength(20)]
+  string Genre,
+
+  [property: Range(1, 100)]
+  decimal Price,
+
+  DateOnly ReleaseDate
+);
